@@ -241,7 +241,7 @@ def enigma(message,
         if isinstance(v,np.ndarray): # check that vectorize() returned a vector (np.ndarray), meaning the character is a letter
             # rotate rotors
             counter += 1
-            RI = rotate(RI,int((counter+550)/676%26)) # the formula is empirical... the left rotor rotates when RII advances from E to F (only strictly true for Enigma 1 Rotor III)
+            RI = rotate(RI,int((counter+550)/676%26)) # the formula is empirical... the left rotor rotates when RII advances from E to F (only strictly true for Enigma 1 Rotor II)
             RII = rotate(RII,int((counter+4)/26%26)) # the formula is empirical... the middle rotor rotates when RIII advances from V to W (only strictly true for Enigma 1 Rotor III)
             RIII = rotate(RIII,counter) # the rightmost rotor rotates with every key press
             # send the signal through the rotor assembly
